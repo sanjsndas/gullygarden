@@ -273,16 +273,26 @@
             }
         }
 
-        /* Animations */
+        /* Simplified animations - removed potential blocking fade-in */
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1; /* Always visible now */
+            transform: translateY(0);
             transition: all 0.6s ease;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .fade-in.animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -474,11 +484,9 @@
                 <div class="contact-info">
                     <h3>Questions About These Terms?</h3>
                     <p><strong>Contact us:</strong></p>
-                    <p>📞 Phone:  (225) 223-1738</p>
+                    <p>📞 Phone: (225) 223-1738</p>
                     <p>✉️ Email: info@gullygardening.com</p>
-                    <p>📍 Address:  
-                           742 Evergreen Terrace  <br>
-                           Springfield, IL 62704  </p>
+                    <p>📍 Address: 742 Evergreen Terrace<br>Springfield, IL 62704</p>
                     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
                         We're here to clarify any questions about our terms and ensure a positive service experience.
                     </p>
@@ -512,7 +520,7 @@
             });
         });
 
-        // Fade in animation on scroll
+        // Enhanced fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -521,11 +529,12 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('animate');
                 }
             });
         }, observerOptions);
 
+        // Observe all fade-in elements
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
@@ -540,6 +549,18 @@
                 header.style.background = 'linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%)';
                 header.style.backdropFilter = 'none';
             }
+        });
+
+        // Debug: Log when page loads to ensure JavaScript is working
+        console.log('Terms of Service page loaded successfully');
+        
+        // Fallback: Ensure content is visible even if animations fail
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
         });
     </script>
 </body>
