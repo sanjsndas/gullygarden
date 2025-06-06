@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer data-domain="gullygardening.vercel.app" src="https://plausible.io/js/script.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gully Gardening Services - Professional Landscaping & Garden Design</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <script defer data-domain="puregrass.vercel.app" src="https://plausible.io/js/script.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pure Grass Gardening & Irrigation Services</title>
+<style>
+  :root {
+    --green-primary: #2e7d32;
+    --green-light: #81c784;
+    --green-dark: #1b5e20;
+    --off-white: #f9faf7;
+    --brown: #5d4037;
+    --shadow: rgba(0,0,0,0.1);
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
 
-       
 
 
 
 
-       
+
+
+
+
+
+  
+
+
+
+    body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
@@ -115,662 +130,411 @@
 
 
 
-        
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #2c3e2d;
-            overflow-x: hidden;
-        }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
 
-        .logo::before {
-            content: "🌿";
-            font-size: 2rem;
-        }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-        }
 
-        .nav-links a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23228B22" width="1200" height="600"/><circle fill="%2332CD32" cx="200" cy="100" r="50" opacity="0.7"/><circle fill="%2390EE90" cx="800" cy="150" r="30" opacity="0.6"/><circle fill="%23228B22" cx="1000" cy="300" r="70" opacity="0.5"/><path d="M0 400 Q300 350 600 400 T1200 400 V600 H0 Z" fill="%232F4F2F"/></svg>');
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
 
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
 
-        .cta-button {
-            background: linear-gradient(45deg, #32CD32, #228B22);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(50, 205, 50, 0.4);
-        }
+  
+    margin: 0; padding: 0;
+    font-family: var(--font-sans);
+    color: #333;
+    background: var(--off-white);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: var(--green-dark);
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--shadow);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: var(--green-light);
+    outline: none;
+  }
+  .hero {
+    background: url('hero.png') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem 4rem;
+    box-shadow: inset 0 0 0 1000px rgba(46,125,50,0.6);
+  }
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h2.section-title {
+    color: var(--green-dark);
+    border-left: 6px solid var(--green-primary);
+    padding-left: 12px;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  ul {
+    margin: 1rem 0 1rem 1.2rem;
+  }
+  ul li {
+    margin-bottom: 0.6rem;
+  }
+  .services-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .service-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px var(--shadow);
+  }
+  .service-card h3 {
+    margin-top: 0;
+    color: var(--green-primary);
+    text-align: center;
+  }
+  .service-card p {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .service-card img {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px var(--shadow);
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .testimonial {
+    background: var(--green-light);
+    color: var(--green-dark);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .faq dt {
+    font-weight: 700;
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+  }
+  .faq dt::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-weight: 700;
+    color: var(--green-primary);
+    transition: transform 0.3s ease;
+  }
+  .faq dt.active::after {
+    content: '-';
+  }
+  .faq dd {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    display: none;
+  }
+  .faq dd.active {
+    display: block;
+  }
+  footer {
+    background: var(--green-dark);
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+  footer p {
+    margin: 0.2rem 0;
+  }
+  .contact-info {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(50, 205, 50, 0.6);
-        }
+  /* Price list styling */
+  .price-list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow);
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 1.5rem auto;
+  }
+  .price-list h3 {
+    color: var(--green-primary);
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .price-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .price-list th, .price-list td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  .price-list th {
+    background: var(--green-light);
+    color: var(--green-dark);
+  }
+  .price-list tr:hover {
+    background: #f1f9f1;
+  }
 
-        /* Services Section */
-        .services {
-            padding: 5rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2c3e2d;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #32CD32, #228B22);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #32CD32, #228B22);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2c3e2d;
-        }
-
-        .service-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 5rem 2rem;
-            background: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-item .gallery-caption {
-            padding: 1rem;
-            text-align: center;
-            font-weight: bold;
-            color: #2c3e2d;
-            background: white;
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%);
-            color: white;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-form {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 8px;
-            background: rgba(255,255,255,0.9);
-            font-size: 1rem;
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-item span {
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a4d3a;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links a {
-            color: #90EE90;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .footer-links a:hover {
-            background: rgba(144, 238, 144, 0.1);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .footer-links a {
-                padding: 0.8rem;
-                background: rgba(144, 238, 144, 0.1);
-                border-radius: 8px;
-            }
-
-            .service-image {
-                height: 180px;
-            }
-
-            .gallery-item img {
-                height: 220px;
-            }
-        }
-    </style>
+  @media (max-width: 600px) {
+    .hero h2 {
+      font-size: 2rem;
+    }
+    nav a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .service-card {
+      height: auto;
+    }
+  }
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">Gully Gardening Services</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <h1>Pure Grass Gardening Services</h1>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Transform Your Outdoor Space</h1>
-            <p>Professional landscaping and garden design services that bring your vision to life. From concept to completion, we create beautiful, sustainable outdoor environments.</p>
-            <a href="#contact" class="cta-button">Get Free Quote</a>
-        </div>
-    </section>
+<section class="hero" role="banner" aria-label="Introduction Hero Section">
+  <h2>Enhance Your Outdoors With Pure Grass</h2>
+  <p>Your trusted partner for expert gardening and irrigation solutions. Bringing nature’s beauty to your doorstep with care and precision.</p>
+</section>
+<main class="container" role="main" id="main-content">
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <img src="https://plus.unsplash.com/premium_photo-1663100115907-e95ff56f1045?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Garden Design" class="service-image">
-                    <span class="service-icon">🌱</span>
-                    <h3>Garden Design</h3>
-                    <p>Custom garden designs tailored to your space, style, and preferences. We create beautiful, functional outdoor spaces that reflect your personality.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1565988570061-2a8c2d22900f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Landscaping Design" class="service-image">
-                    <span class="service-icon">🏞️</span>
-                    <h3>Landscaping</h3>
-                    <p>Complete landscaping solutions including hardscaping, softscaping, and terrain modification to transform your property.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1693304182154-d9c13cb5b007?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Maintenance Work" class="service-image">
-                    <span class="service-icon">✂️</span>
-                    <h3>Maintenance</h3>
-                    <p>Regular garden maintenance services to keep your landscape looking pristine year-round. Pruning, weeding, and seasonal care.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tree Services" class="service-image">
-                    <span class="service-icon">🌳</span>
-                    <h3>Tree Services</h3>
-                    <p>Professional tree planting, pruning, and removal services. We ensure your trees remain healthy and beautiful.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <img src="https://plus.unsplash.com/premium_photo-1678677939546-b71a252267c2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Irrigation" class="service-image">
-                    <span class="service-icon">💧</span>
-                    <h3>Irrigation</h3>
-                    <p>Efficient irrigation system design and installation to keep your garden healthy while conserving water.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Plant Care" class="service-image">
-                    <span class="service-icon">🌿</span>
-                    <h3>Plant Care</h3>
-                    <p>Expert plant selection, installation, and ongoing care to ensure your garden thrives in every season.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="gardening-services" aria-labelledby="gardening-title">
+  <h2 id="gardening-title" class="section-title">Comprehensive Gardening Services</h2>
+  <p>At Pure Grass Gardening Services, we understand that a beautiful garden is a sanctuary, a place where life blooms and moments thrive. Our gardening services are designed to transform your outdoor spaces into lush, vibrant retreats that balance aesthetics with nature’s harmony. With expert knowledge, we offer a wide range of gardening solutions tailored to your unique environment and needs.</p>
+  
+  <div class="services-list">
+    <article class="service-card" tabindex="0" role="region" aria-label="Garden Design Service">
+      <img src="design.png" alt="Garden Design Layout" />
+      <h3>Garden Design & Planning</h3>
+      <p>We craft personalized garden designs that reflect your vision, lifestyle, and the natural characteristics of your landscape. Our plans feature seasonal planting guides, sustainable practices, and harmonious layouts to ensure year-round beauty.</p>
+    </article>
+    <article class="service-card" tabindex="0" role="region" aria-label="Plant Selection and Installation Service">
+      <img src="selection.png" alt="Plant selection and installation" />
+      <h3>Plant Selection & Installation</h3>
+      <p>Choose from a wide variety of native, drought-resistant, and ornamental plants. Our team handles plant installation with precision, ensuring healthy growth and integration with your garden’s ecosystem.</p>
+    </article>
+    <article class="service-card" tabindex="0" role="region" aria-label="Soil Health Management Service">
+      <img src="health.png" alt="Soil Analysis" />
+      <h3>Soil Analysis & Health</h3>
+      <p>Healthy gardens start with healthy soil. We analyze your soil’s quality and composition, amending it with organic matter and providing nutrient management plans tailored for optimal plant growth.</p>
+    </article>
+  </div>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Our Work Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item fade-in">
-                    <img src="https://plus.unsplash.com/premium_photo-1679862570212-eedfe96e76f9?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Before & After Garden Transformation">
-                    <div class="gallery-caption">Before & After Garden Transformation</div>
-                </div>
-                <div class="gallery-item fade-in">
-                    <img src="https://plus.unsplash.com/premium_photo-1747401302615-d57417a69d28?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern Landscape Design">
-                    <div class="gallery-caption">Modern Landscape Design</div>
-                </div>
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1740517367497-30d198dc79f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Outdoor Living Space">
-                    <div class="gallery-caption">Outdoor Living Space</div>
-                </div>
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1676190004026-6e9c31e587d9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Professional Tree Work">
-                    <div class="gallery-caption">Professional Tree Work</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="price-list" aria-label="Gardening Services Price List">
+    <h3>Gardening Services Price List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Price Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Garden Design & Planning</td>
+          <td>$300 - $1,200 (depends on garden size)</td>
+        </tr>
+        <tr>
+          <td>Plant Selection & Installation</td>
+          <td>$150 - $800 (depending on plant type & quantity)</td>
+        </tr>
+        <tr>
+          <td>Soil Analysis & Health Management</td>
+          <td>$100 - $300</td>
+        </tr>
+        <tr>
+          <td>Routine Garden Maintenance (per visit)</td>
+          <td>$80 - $150</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <p>Our gardening expertise extends beyond planting. We are committed to sustainable practices such as organic fertilization, pest control alternatives, and water conservation measures that promote environmental health and reduce your garden’s footprint.</p>
+  <p>Whether you have a small backyard or expansive grounds, Pure Grass Gardening Services offers scalable solutions customized to fit your budget and gardening ambitions.</p>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Gully Gardening</h2>
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>With over 15 years of experience in landscape design and horticulture, Gully Gardening Services has been transforming outdoor spaces across the region. Our team of certified landscapers and garden designers brings creativity, expertise, and passion to every project.</p>
-                    
-                    <p>We believe that every outdoor space has the potential to become a beautiful, functional extension of your home. Whether you're looking for a peaceful garden retreat, an entertaining space for family and friends, or a low-maintenance landscape solution, we work closely with you to bring your vision to life.</p>
-                    
-                    <p>Our commitment to sustainability means we use eco-friendly practices, native plants when possible, and water-efficient irrigation systems. We're not just creating beautiful gardens – we're creating environments that support local ecosystems and conserve resources.</p>
-                </div>
-                <div class="fade-in">
-                    <img src="https://images.unsplash.com/photo-1621958206813-2e9c0441c5b0?q=80&w=1988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Professional Gardening Team" class="about-image">
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="irrigation-services" aria-labelledby="irrigation-title">
+  <h2 id="irrigation-title" class="section-title">Efficient Irrigation Services</h2>
+  <p>An efficient irrigation system is key to maintaining healthy plants and conserving water. We specialize in designing, installing, and servicing irrigation solutions that keep your garden nourished without waste.</p>
+  
+  <div class="services-list">
+    <article class="service-card" tabindex="0" role="region" aria-label="Irrigation System Design Service">
+      <img src="irri.png" alt="Irrigation System Design" />
+      <h3>Irrigation System Design</h3>
+      <p>We evaluate your garden layout, plant types, water sources, and soil conditions to create a customized irrigation system blueprint designed for maximum efficiency and minimal water waste.</p>
+    </article>
+    <article class="service-card" tabindex="0" role="region" aria-label="Irrigation Installation Service">
+      <img src="install.png" alt="Irrigation Installation" />
+      <h3>Irrigation Installation & Setup</h3>
+      <p>Our expert technicians install drip irrigation, sprinkler systems, and smart water timers with the latest technology to automate watering schedules, ensuring your garden receives just the right amount of hydration.</p>
+    </article>
+    <article class="service-card" tabindex="0" role="region" aria-label="Irrigation Maintenance Service">
+      <img src="repair.png" alt="Irrigation Maintenance" />
+      <h3>Regular Maintenance & Repairs</h3>
+      <p>Proper irrigation system upkeep prevents clogs, leaks, and overwatering. We offer maintenance plans that keep your system functioning flawlessly and protect your investment through timely repairs.</p>
+    </article>
+  </div>
 
+  <div class="price-list" aria-label="Irrigation Services Price List">
+    <h3>Irrigation Services Price List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Price Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Irrigation System Design</td>
+          <td>$250 - $900</td>
+        </tr>
+        <tr>
+          <td>Irrigation Installation & Setup</td>
+          <td>$400 - $1,500 (depends on system complexity)</td>
+        </tr>
+        <tr>
+          <td>Maintenance & Repairs (per visit)</td>
+          <td>$100 - $250</td>
+        </tr>
+        <tr>
+          <td>Water Conservation Consultation</td>
+          <td>$80 - $200</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <p>Our irrigation solutions contribute to healthier plants, reduced water bills, and ease of garden management. We emphasize eco-friendly practices that align with local water regulations and environmental stewardship.</p>
+</section>
 
+<section id="why-choose-us" aria-labelledby="choose-us-title">
+  <h2 id="choose-us-title" class="section-title">Why Choose Pure Grass Gardening Services?</h2>
+  <p>Choosing the right gardening and irrigation partner is essential for achieving your outdoor living dreams. Here’s why Pure Grass stands out:</p>
+  <ul>
+    <li><strong>Experience & Expertise:</strong> Over 15 years of dedicated service in gardening and irrigation with certified horticulturists and irrigation specialists.</li>
+    <li><strong>Personalized Solutions:</strong> Every garden is different; our tailored approaches consider your preferences and local conditions.</li>
+    <li><strong>Sustainable Practices:</strong> Commitment to eco-friendly methods that support biodiversity and conserve resources.</li>
+    <li><strong>Transparent Pricing:</strong> Honest quotes with no hidden fees, competitive rates, and flexible service packages.</li>
+    <li><strong>Customer Satisfaction:</strong> Proven track record with hundreds of happy clients and glowing testimonials.</li>
+    <li><strong>Quick Response:</strong> Reliable customer service ready to assist with inquiries and emergency repairs.</li>
+  </ul>
+  <p>We don’t just maintain gardens - we create living works of art that bring joy and tranquility to your home or business.</p>
+</section>
 
+<section id="testimonials" aria-labelledby="testimonial-title">
+  <h2 id="testimonial-title" class="section-title">What Our Clients Say</h2>
+  <blockquote class="testimonial" tabindex="0">
+    "Pure Grass transformed my backyard from a patchy lawn into a stunning garden oasis. Their irrigation system keeps everything green and thriving with hardly any effort on my part. Highly recommend!" – Jessica M.
+  </blockquote>
+  <blockquote class="testimonial" tabindex="0">
+    "The team is professional, friendly, and truly knowledgeable. Their regular maintenance services give me peace of mind and keep my garden healthy all year." – Raj P.
+  </blockquote>
+  <blockquote class="testimonial" tabindex="0">
+    "Excellent value and quality workmanship. They listened to what I wanted and delivered beyond my expectations. It’s rare to find such dedicated service providers." – Christine K.
+  </blockquote>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-form fade-in">
-                    <h3>Request a Quote</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option>Garden Design</option>
-                                <option>Landscaping</option>
-                                <option>Maintenance</option>
-                                <option>Tree Services</option>
-                                <option>Irrigation</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info fade-in">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <div>
-                            <strong>Address:</strong><br>
-                            742 Evergreen Terrace<br>
-                            Springfield, IL 62704
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span>📞</span>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            (225) 223-1738
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span>✉️</span>
-                        <div>
-                            <strong>Email:</strong><br>
-                            info@gullygardening.com
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span>🕒</span>
-                        <div>
-                            <strong>Hours:</strong><br>
-                            Mon-Fri: 8AM-6PM<br>
-                            Sat: 9AM-4PM<br>
-                            Sun: By Appointment
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="faq" aria-labelledby="faq-title" class="faq">
+  <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
+  <dl>
+    <dt tabindex="0">How often should I water my garden?</dt>
+    <dd>Watering frequency depends on plant types, soil, and seasonal needs. Generally, a few deep watering sessions per week encourage healthy roots over daily surface watering.</dd>
+    <dt tabindex="0">Do you use chemical pesticides in gardening?</dt>
+    <dd>We prioritize organic and natural pest management to protect your garden's health while minimizing environmental impact.</dd>
+    <dt tabindex="0">Can you install irrigation systems for existing gardens?</dt>
+    <dd>Yes, we provide expert evaluation and installation for retrofitting irrigation solutions to any existing garden layout.</dd>
+    <dt tabindex="0">What maintenance does an irrigation system need?</dt>
+    <dd>Regular checks for leaks, nozzle clogs, and timer functionality help keep irrigation efficient and avoid water waste.</dd>
+    <dt tabindex="0">Are your services available for commercial properties?</dt>
+    <dd>Absolutely, we cater to both residential and commercial clients, tailoring services to property size and usage needs.</dd>
+  </dl>
+</section>
 
-
-
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
-                <p>&copy; 2025 Gully Gardening Services. All rights reserved. | Licensed & Insured | Sustainable Landscaping Specialists</p>
-            </div>
-        </div>
-    </footer>
+<section aria-label="Legal Disclaimer" style="font-size:0.9rem; color:#555; margin-top: 4rem;">
+  <h2 class="section-title" style="border-color:#888; color:#888;">Disclaimer</h2>
+  <p>
+    Pure Grass Gardening Services strives to provide accurate and reliable information and services. However, variations in climate, soil, and other factors may affect gardening outcomes. The company disclaims any liability for damages or losses resulting from the use or application of information and services provided. Customers are encouraged to consult local experts for region-specific advice. All services are subject to terms and conditions outlined in service agreements. Pure Grass Gardening Services does not guarantee specific plant growth results due to natural variability.
+  </p>
+</section>
+</main>
 
 
 
 
-    
 
-    
- <div class="blur-overlay">
+   <div class="blur-overlay">
     <div class="verification-box" id="verify-box">
       <div class="fake-recaptcha" id="captcha">
         <input type="checkbox" id="check" />
@@ -833,59 +597,33 @@
     });
   </script>
 
-    
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+  
+<footer role="contentinfo" aria-label="Footer Information">
+  <p>© 2024 Pure Grass Gardening Services. All rights reserved.</p>
+  <p class="contact-info">Phone: <a href="tel:+8889892299" style="color:#a5d6a7; text-decoration:none;">+1 (888) 989-2299</a> | Address: 1 Washington Mews, New York, NY 10003, USA</p>
+</footer>
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-            this.reset();
-        });
-
-        // Header background change on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(26, 77, 58, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.background = 'linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%)';
-                header.style.backdropFilter = 'none';
-            }
-        });
-    </script>
+<script>
+  // FAQ accordion toggle
+  document.querySelectorAll('.faq dt').forEach((dt) => {
+    dt.addEventListener('click', () => {
+      dt.classList.toggle('active');
+      const dd = dt.nextElementSibling;
+      if (dd) {
+          dd.classList.toggle('active');
+      }
+    });
+    dt.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dt.click();
+      }
+    });
+  });
+</script>
 </body>
 </html>
+
